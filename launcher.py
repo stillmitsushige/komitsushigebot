@@ -18,4 +18,13 @@ async def on_message(message):
     if "Bot" in message.content:
         await message.channel.send(" は~い、Bot で~す ")
 
+
+    # ほげ
+    await bot.process_commands(message)
+
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f" こん。{ctx.author.name}！")
+    
 bot.run(config.TOKEN)
